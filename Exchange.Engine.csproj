@@ -1,0 +1,195 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="3.5" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>9.0.21022</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{5173C588-C1C2-4611-B6B5-0660B558B61D}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Exchange.Engine</RootNamespace>
+    <AssemblyName>Exchange.Engine</AssemblyName>
+    <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>TRACE;DEBUG;UNIT_TEST</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>..\..\..\lib\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="antlr.runtime, Version=2.7.6.2, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\antlr.runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Common.Logging, Version=1.2.0.0, Culture=neutral, PublicKeyToken=af08829b84f0328e">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Common.Logging.dll</HintPath>
+    </Reference>
+    <Reference Include="Exchange, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Exchange.dll</HintPath>
+    </Reference>
+    <Reference Include="log4net, Version=1.2.10.0, Culture=neutral, PublicKeyToken=1b44e1d426115821, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\log4net.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Caching, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Microsoft.Practices.EnterpriseLibrary.Caching.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Microsoft.Practices.EnterpriseLibrary.Common.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.EnterpriseLibrary.Data, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Microsoft.Practices.EnterpriseLibrary.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.ObjectBuilder2, Version=2.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Microsoft.Practices.ObjectBuilder2.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Practices.Unity, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Microsoft.Practices.Unity.dll</HintPath>
+    </Reference>
+    <Reference Include="Mindplex.Core, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Mindplex.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\nunit.core.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.core.interfaces, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\nunit.core.interfaces.dll</HintPath>
+    </Reference>
+    <Reference Include="nunit.framework, Version=2.4.7.0, Culture=neutral, PublicKeyToken=96d09a1eb7f44a77, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\nunit.framework.dll</HintPath>
+    </Reference>
+    <Reference Include="Spring.Core, Version=1.1.2.20125, Culture=neutral, PublicKeyToken=65e474d141e25e07, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\..\lib\Spring.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Core">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Xml.Linq">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data.DataSetExtensions">
+      <RequiredTargetFramework>3.5</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="EventLanguageCompiler.cs" />
+    <Compile Include="ExchangeResponse.cs" />
+    <Compile Include="ExchangeTranslator.cs" />
+    <Compile Include="ExchangeAdapter.cs" />
+    <Compile Include="ExchangeDisposition.cs" />
+    <Compile Include="ExchangeRuntime.cs" />
+    <Compile Include="ExchangeEngine.cs" />
+    <Compile Include="ExchangeEvent.cs" />
+    <Compile Include="ExchangeTracker.cs" />
+    <Compile Include="IExchangeModule.cs" />
+    <Compile Include="IExchangeEngine.cs" />
+    <Compile Include="IExchangeStrategy.cs" />
+    <Compile Include="Module\AllocationModule.cs" />
+    <Compile Include="Monitor\Resource.cs" />
+    <Compile Include="Monitor\ResourceCache.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Strategy\Bid.cs" />
+    <Compile Include="Strategy\CampaignListStrategy.cs" />
+    <Compile Include="Strategy\Events\CleanerEvent.cs" />
+    <Compile Include="Strategy\CleanerStrategy.cs" />
+    <Compile Include="Strategy\Databaser.cs" />
+    <Compile Include="Strategy\DebtTranslatorStrategy.cs" />
+    <Compile Include="Strategy\Events\ValidationEvent.cs" />
+    <Compile Include="Strategy\GenericDatabaseStrategy.cs" />
+    <Compile Include="Strategy\Events\DispositionTrackerEvent.cs" />
+    <Compile Include="Strategy\Events\DistanceEvent.cs" />
+    <Compile Include="Strategy\DistanceStrategy.cs" />
+    <Compile Include="Strategy\Events\DistributionEvent.cs" />
+    <Compile Include="Strategy\DistributionStrategy.cs" />
+    <Compile Include="Strategy\GenericStrategy.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Strategy\Events\GenericStrategyEvent.cs" />
+    <Compile Include="Strategy\Events\ImpoundEvent.cs" />
+    <Compile Include="Strategy\ImpoundStrategy.cs" />
+    <Compile Include="Strategy\Events\InboundDuplicateEvent.cs" />
+    <Compile Include="Strategy\InboundDuplicateStrategy.cs" />
+    <Compile Include="Strategy\Events\DebtLeadEvent.cs" />
+    <Compile Include="Strategy\DebtLeadStrategy.cs" />
+    <Compile Include="Strategy\LeadPersistStrategy.cs" />
+    <Compile Include="Strategy\LeadValidationStrategy.cs" />
+    <Compile Include="Strategy\Events\MessageGatewayEvent.cs" />
+    <Compile Include="Strategy\MessageGatewayStrategy.cs" />
+    <Compile Include="Strategy\Events\NotificationEvent.cs" />
+    <Compile Include="Strategy\NotificationStrategy.cs" />
+    <Compile Include="Strategy\Events\OutboundDuplicateEvent.cs" />
+    <Compile Include="Strategy\OutboundDuplicateStrategy.cs" />
+    <Compile Include="Strategy\Events\PersistenceEvent.cs" />
+    <Compile Include="Strategy\Events\PricingEvent.cs" />
+    <Compile Include="Strategy\PricingStrategy.cs" />
+    <Compile Include="Strategy\DispositionTrackerStrategy.cs" />
+    <Compile Include="Strategy\Events\SaverEvent.cs" />
+    <Compile Include="Strategy\SaverStrategy.cs" />
+    <Compile Include="Strategy\Events\TransformerEvent.cs" />
+    <Compile Include="Strategy\TransformerStrategy.cs" />
+    <Compile Include="Strategy\Events\VintageEvent.cs" />
+    <Compile Include="Strategy\VintageStrategy.cs" />
+    <Compile Include="Test\AllocationServiceTest.cs" />
+    <Compile Include="Test\GenericExchangeEngineTest.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="EmailTemplate.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <COMReference Include="HexValidEmailLib">
+      <Guid>{58FB8161-C554-11D3-9C17-00C04FA0D84C}</Guid>
+      <VersionMajor>1</VersionMajor>
+      <VersionMinor>0</VersionMinor>
+      <Lcid>0</Lcid>
+      <WrapperTool>tlbimp</WrapperTool>
+      <Isolated>False</Isolated>
+    </COMReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Xsl\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
